@@ -1,6 +1,6 @@
 #!/bin/bash
-cp *.java *.example *.yourExtension /git/dir
-cd /git/dir
+rsync -av --progress ~/dev/dir/* ~/git/dir/ --exclude *.somefile
+cd ~/git/dir
 git add .
 git commit
-git push -u origin master
+git push origin master
